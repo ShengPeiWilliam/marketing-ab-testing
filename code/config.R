@@ -1,0 +1,1 @@
+MARKETING_DATA <- "../data/marketing_AB.csv"
