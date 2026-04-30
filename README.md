@@ -74,7 +74,7 @@ Next steps:
 
 ```
 report/
-  └── marketing_report.pdf    # Full analysis writeup
+  └── marketing_report.pdf      # Full analysis writeup
 code/
   ├── marketing_analysis.ipynb  # Main analysis (R notebook)
   └── config.R                  # Data path configuration
