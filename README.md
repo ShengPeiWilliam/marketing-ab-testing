@@ -1,9 +1,14 @@
 # Marketing A/B Testing
-Bayesian and Frequentist A/B testing on a digital marketing campaign dataset. 
-Compared advertisement exposure (ad) versus public service announcement (psa) 
-across 588,101 users, using Proportion test, Chi-square, Mann-Whitney U, 
-Beta-Binomial, and Gamma-Poisson models. The ad group yields a higher conversion 
-rate with 100% posterior probability, though the practical effect remains negligible.
+
+[![Full Report](https://img.shields.io/badge/📄_Read_Full_Report-PDF-blue?style=for-the-badge)](report/marketing_report.pdf)
+
+Bayesian and Frequentist A/B testing on 588K users, comparing advertisement 
+(ad) versus public service announcement (psa) exposure on conversion rate.
+
+The ad group yields a higher conversion rate with 100% posterior probability 
+(95% HDI: 0.59%–0.94%), but Cohen's h = 0.053 flags the effect as practically 
+negligible, a common pattern in large-sample A/B tests where statistical 
+significance does not imply business significance.
 
 ## Motivation
 
@@ -34,11 +39,7 @@ days or hours drive the overall difference.
 
 ## Key Results
 
-The ad group achieves a conversion rate of 2.55% compared to 1.79% for psa, 
-with 100% posterior probability. Despite statistical significance, Cohen's 
-h = 0.053 indicates a negligible practical effect, a common pattern in 
-large-sample A/B tests. Subgroup analysis identifies Monday and afternoon 
-hours as the highest-performing conditions, with hour 16 reaching the peak.
+**Top-performing subgroups (ad group)**: Monday (3.32%), hour 16 (3.09%)
 
 **Frequentist**
 
@@ -71,13 +72,19 @@ Next steps:
 
 ## Repository
 
-- `report/marketing_report.pdf`: Final report
-- `code/marketing_analysis.ipynb`: Main analysis notebook
-- `code/config.R`: Configuration file (data paths)
+```
+report/
+  └── marketing_report.pdf    # Full analysis writeup
+code/
+  ├── marketing_analysis.ipynb  # Main analysis (R notebook)
+  └── config.R                  # Data path configuration
+```
 
 ## Tools
 
-R · ggplot2 · tidyr · dplyr · rstatix · HDInterval
+**Statistical methods**: Proportion test, Chi-square, Mann-Whitney U, Beta-Binomial, Gamma-Poisson  
+**Language**: R  
+**Libraries**: tidyverse (dplyr, tidyr), ggplot2, rstatix, HDInterval
 
 ## References
 
