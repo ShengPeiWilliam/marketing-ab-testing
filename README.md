@@ -10,6 +10,8 @@ The ad group yields a higher conversion rate with 100% posterior probability
 negligible, a common pattern in large-sample A/B tests where statistical 
 significance does not imply business significance.
 
+[See business recommendations →](#business-recommendations)
+
 ## Motivation
 
 After completing [Cookie Cats A/B Testing](https://github.com/ShengPeiWilliam/bayesian-ab-testing), 
@@ -57,11 +59,18 @@ days or hours drive the overall difference.
 | total.ads (randomization) | 97.19% | [-0.0013, 0.1284] |
 | converted | 100.00% | [0.0059, 0.0094] |
 
+## Business Recommendations
+
+**1. Statistical significance is not business significance**: The ad outperforms psa with 100% posterior probability, but the effect is negligible (h = 0.053). 
+> *The ad works; it just does not justify scaling the budget indefinitely. Spend smarter, not more.*
+
+**2. Concentrate on Monday and hour 16**: Monday (3.32%) and 16:00 (3.09%) are the highest-converting subgroups. Shifting spend toward these windows offers better return per impression than a uniform schedule.
+
+> *The data says the ad works. It also says the effect is so small that timing is everything. Monday converts best, suggesting users decide over the weekend and act on Monday. Weekend impressions, Monday conversions.*
+
 ## Reflections & Next Steps
 
-All effect sizes remain negligible despite statistical significance. With 
-588,101 observations, even trivial differences reach significance, reinforcing 
-that p-value alone is insufficient for business decisions.
+With 588,101 observations, even trivial differences reach significance. This project is a reminder that p-value alone is insufficient for business decisions.
 
 Next steps:
 - **Empirical Bayes**: estimate a data-driven prior from observed day/hour rates 
